@@ -4,30 +4,48 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
-			#times{
+			div{
 				position: absolute;
-				width: 150px;
-				height: 50px;
-				line-height: 50px;
-				color: #555;
-				font-size: 18px;
-				text-align: center;
-				outline: none;
-				border: 1px solid #bbb;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%,-50%);
-				background: none;
+			}
+			div a,#times{
+				display: inline-block;
+				color: #555;
+				font-size: 18px;
+				line-height: 50px;
+				text-align: center;
+				border: 1px solid #bbb;
 				cursor: pointer;
+			} 
+			div a{
+				width: 100px;
+				height: 48px;
+				text-decoration: none;
+				margin-right: 15px;
+			}
+			div a:hover{
+				color: darkgoldenrod;
+				border-color: darkgoldenrod;
+			}
+			#times{
+				width: 150px;
+				height: 50px;
+				outline: none;
+				background: none;
 			}
 			#times:hover{
-				color: red;
-				border-color: red;
+				color: crimson;
+				border-color: crimson;
 			}
 		</style>
 	</head>
 	<body>
-		<input type="button" name="times" id="times" value="获取验证码" onclick="clickBtn()"/>
+		<div>
+			<a href="https://github.com/linkours/60s-countdown">返回</a>
+			<input type="button" name="times" id="times" value="获取验证码" onclick="clickBtn()"/>
+		</div>	
 		<script>
 			function clickBtn(){
 				var count=60;
